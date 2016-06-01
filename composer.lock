@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a3b95581919237b44d8c7ad899c09a0e",
-    "content-hash": "90194759ff11a844eb8d3bd6e7bfa8ee",
+    "hash": "a6e8b60e46abfb1b46c0584667400f1a",
+    "content-hash": "1dc82010671f58525abb03f09fab87ee",
     "packages": [
         {
             "name": "behat/behat",
@@ -739,6 +739,38 @@
                 "webtest"
             ],
             "time": "2015-06-15 20:19:33"
+        },
+        {
+            "name": "medology/flexible-mink",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Medology/FlexibleMink.git",
+                "reference": "2836984160da9f7d01ae80bde9c364a6f31bd176"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Medology/FlexibleMink/zipball/2836984160da9f7d01ae80bde9c364a6f31bd176",
+                "reference": "2836984160da9f7d01ae80bde9c364a6f31bd176",
+                "shasum": ""
+            },
+            "require": {
+                "behat/behat": "^3.0",
+                "behat/mink-extension": "^2.0",
+                "php": ">=5.4.41"
+            },
+            "type": "behat-extension",
+            "autoload": {
+                "psr-0": {
+                    "Behat\\FlexibleMink\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Mink extension with patient assertions and object storage",
+            "time": "2016-05-31 19:38:07"
         },
         {
             "name": "react/promise",
@@ -1517,7 +1549,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "medology/flexible-mink": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -3,7 +3,12 @@ default:
     Behat\MinkExtension:
       base_url: https://www.github.com
       default_session: goutte
+      javascript_session: chrome
       show_cmd: firefox %s
       sessions:
+        chrome:
+          selenium2:
+            browser: chrome
+            wd_host: http://chrome:4444/wd/hub
         goutte:
           goutte: ~

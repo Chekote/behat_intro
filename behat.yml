@@ -1,0 +1,9 @@
+default:
+  extensions:
+    Behat\MinkExtension:
+      base_url: https://www.github.com
+      default_session: goutte
+      show_cmd: firefox %s
+      sessions:
+        goutte:
+          goutte: ~

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+ACCOUNT=chekote
+REPO=php
+VERSION=5.4.45-laravel
+PROJECT_NAME=behat
+
+. "${DIR}"/lib/args.sh
+. "${DIR}"/lib/tty.sh
+
+COMMAND="echo pid1 > /dev/null && php $ARGS"
+
+docker run -i${TTY} --net ${PROJECT_NAME}_default --rm -u=1000 -v $(pwd):/data  ${ACCOUNT}/${REPO}:${VERSION} \
+    "${COMMAND}"

@@ -5,6 +5,7 @@ use Behat\FlexibleMink\Context\StoreContext;
 use contexts\domain\CustomerContext;
 use contexts\domain\LocationContext;
 use contexts\domain\ProductContext;
+use contexts\domain\SaleContext;
 
 /**
  * Defines step implementations from the context of a Web Page.
@@ -14,6 +15,7 @@ class FeatureContext extends FlexibleContext {
     use CustomerContext;
     use LocationContext;
     use ProductContext;
+    use SaleContext;
     use StoreContext;
 
     /**

@@ -5,5 +5,13 @@
         "behat/mink-goutte-driver": "^1.2",
         "behat/mink-selenium2-driver": "^1.3",
         "Medology/flexible-mink": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "": [
+                ".",
+                "./features"
+            ]
+        }
     }
 }

@@ -22,3 +22,8 @@ Feature: Product
      Then the store should contain something under key "Product"
       And the Product should have the name "Yummy Mints"
       And the Product should have the price "0.99"
+
+  Scenario: Don't create unecessary duplicates!
+    Given I have a Product with the name "Yummy Mints" and the price "0.99"
+      And I have a Product with the name "Yummy Mints" and the price "0.99"
+     Then the store should contain "1" unique "Product"

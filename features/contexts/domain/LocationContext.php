@@ -36,26 +36,4 @@ trait LocationContext {
         // will affect the Location that we just found / created.
         $this->put($Location, 'Location');
     }
-
-    /**
-     * {@inheritdoc}
-     *
-     * @Then the Location should have the street :street
-     */
-    public function assertLocationStreet($street) {
-        if ($street != $this->getThingProperty('Location', 'street')) {
-            throw new Exception('Street did not match');
-        }
-    }
-
-    /**
-     * {@inheritdoc}
-     *
-     * @Then the Location should have the city :city
-     */
-    public function assertLocationCity($city) {
-        if ($city != $this->getThingProperty('Location', 'city')) {
-            throw new Exception('City did not match');
-        }
-    }
 }

@@ -36,26 +36,4 @@ trait SaleContext {
         // will affect the Sale that we just found / created.
         $this->put($sale, 'Sale');
     }
-
-    /**
-     * {@inheritdoc}
-     *
-     * @Then the Sale should have the date :date
-     */
-    public function assertSaleDate($date) {
-        if ($date != $this->getThingProperty('Sale', 'date')) {
-            throw new Exception('Property did not match');
-        }
-    }
-
-    /**
-     * {@inheritdoc}
-     *
-     * @Then the Sale should have the total :total
-     */
-    public function assertSaleTotal($total) {
-        if ($total != $this->getThingProperty('Sale', 'total')) {
-            throw new Exception('Total did not match');
-        }
-    }
 }

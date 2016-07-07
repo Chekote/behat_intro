@@ -3,6 +3,7 @@
 use Behat\FlexibleMink\Context\FlexibleContext;
 use Behat\FlexibleMink\Context\StoreContext;
 use contexts\domain\CustomerContext;
+use contexts\domain\EntityContext;
 use contexts\domain\LocationContext;
 use contexts\domain\ProductContext;
 use contexts\domain\SaleContext;
@@ -13,6 +14,7 @@ use contexts\domain\SaleContext;
 class FeatureContext extends FlexibleContext {
 
     use CustomerContext;
+    use EntityContext;
     use LocationContext;
     use ProductContext;
     use SaleContext;

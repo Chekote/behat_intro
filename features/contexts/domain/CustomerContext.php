@@ -36,26 +36,4 @@ trait CustomerContext {
         // will affect the Customer that we just found / created.
         $this->put($Customer, 'Customer');
     }
-
-    /**
-     * {@inheritdoc}
-     *
-     * @Then the Customer should have the name :name
-     */
-    public function assertCustomerName($name) {
-        if ($name != $this->getThingProperty('Customer', 'name')) {
-            throw new Exception('Name did not match');
-        }
-    }
-
-    /**
-     * {@inheritdoc}
-     *
-     * @Then the Customer should have the age :age
-     */
-    public function assertCustomerAge($age) {
-        if ($age != $this->getThingProperty('Customer', 'age')) {
-            throw new Exception('Age did not match');
-        }
-    }
 }

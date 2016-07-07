@@ -36,26 +36,4 @@ trait ProductContext {
         // will affect the Product that we just found / created.
         $this->put($product, 'Product');
     }
-
-    /**
-     * {@inheritdoc}
-     *
-     * @Then the Product should have the name :name
-     */
-    public function assertProductName($name) {
-        if ($name != $this->getThingProperty('Product', 'name')) {
-            throw new Exception('Property did not match');
-        }
-    }
-
-    /**
-     * {@inheritdoc}
-     *
-     * @Then the Product should have the price :price
-     */
-    public function assertProductPrice($price) {
-        if ($price != $this->getThingProperty('Product', 'price')) {
-            throw new Exception('Price did not match');
-        }
-    }
 }

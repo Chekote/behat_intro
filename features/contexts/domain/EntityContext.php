@@ -10,6 +10,7 @@ trait EntityContext {
 
     /**
      * @Given /^I have a "(?P<class>[^"]+)"(?: with the following properties:)?$/
+     * @Given /^there is a "(?P<class>[^"]+)"(?: with the following properties:)?$/
      * @param string    $class The class of the Entity.
      * @param TableNode $table The properties for the Entity.
      */
